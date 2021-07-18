@@ -3,6 +3,8 @@ section.top-index {
     background: #C0E2DF url("../images/slider-top/bg.png") no-repeat center;
     padding-top: 30px;
     padding-bottom: 50px;
+    height: 650px;
+    
     .header {
         .header-inner {
             display: flex;
@@ -20,6 +22,27 @@ section.top-index {
             border-right: none;
             border-top: none;
         }
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.5;
+        z-index: 2;
     }
 
     .images {
@@ -41,17 +64,24 @@ section.top-index {
             top: 0;
         }
     }
-
+    .section-inner {
+        z-index: 3;
+    }
     .cont-brand {
         text-align: center;
-        margin-top: -30px;
+        z-index: 3;
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
         .text {
             @include f-b;
-            font-size: 46px;
-            color: #000;
+            font-size: 35px;
+            color: #fff;
             line-height: 1;
             position: relative;
             bottom: 0;
+            margin-top: 25px;
         }
         .wrapper-button {
             position: relative;
@@ -76,6 +106,7 @@ section.top-index {
     @media only screen and (max-width : $lw) {
         padding-top: 15px;
         padding-bottom: 25px;
+        height: 500px;
         .header {
             .logo {
                 img {
@@ -89,6 +120,13 @@ section.top-index {
     }
 
     @media only screen and (max-width : $mw) {
+        height: 400px;
+        .cont-brand {
+            bottom: 45px;
+            .text {
+                font-size: 30px;
+            }
+        }
         .header {
             .logo {
                 img {
@@ -117,11 +155,6 @@ section.top-index {
                 }
             }
         }
-
-        .cont-brand {
-            margin-top: 25px;
-        }
-
         
     }
 
