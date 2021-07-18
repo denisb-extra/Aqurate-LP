@@ -1,0 +1,718 @@
+/* ---------------------- Section top-index ---------------------- */
+section.top-index {
+    background: #C0E2DF url("../images/slider-top/bg.png") no-repeat center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    .header {
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tel {
+            @include f-b;
+            font-size: 42px;
+            line-height: 1;
+            padding-left: 5px;
+            color: #FF6D70;
+            border: 2px solid #ff6d70;
+            border-right: none;
+            border-top: none;
+        }
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-top: 75px;
+
+        .image {
+            img {
+                max-width: 100%;
+            }
+        }
+        .arrow {
+            margin: 0 4%;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .cont-brand {
+        text-align: center;
+        margin-top: -30px;
+        .text {
+            @include f-b;
+            font-size: 46px;
+            color: #000;
+            line-height: 1;
+            position: relative;
+            bottom: 0;
+        }
+        .wrapper-button {
+            position: relative;
+            bottom: 0;
+        }
+        .button {
+            @include f-r;
+            font-size: 18px;
+            color: #fff;
+            background: #ff6d70;
+            padding: 8px 25px;
+            margin-top: 15px;
+            display: inline-block;
+            transition: 0.5s;
+            
+            &:hover {
+                background: #0E87A1;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $lw) {
+        padding-top: 15px;
+        padding-bottom: 25px;
+        .header {
+            .logo {
+                img {
+                    height: 65px;
+                }
+            }
+            .tel {
+                font-size: 35px;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .header {
+            .logo {
+                img {
+                    height: 45px;
+                }
+            }
+            .tel {
+                font-size: 25px;
+            }
+        }
+        .images {
+            flex-direction: column;
+            margin-top: 25px;
+            .image {
+                img {
+                    max-height: 100px;
+                }
+            }
+            .arrow {
+                margin: 15px 0;
+                img {
+                    height: 10px;
+                    max-width: none;
+                    max-height: none;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .cont-brand {
+            margin-top: 25px;
+        }
+
+        
+    }
+
+}
+/* --------------------- /Section top-index ---------------------- */
+
+/* ---------------------- Section form ---------------------- */
+section.form {
+    padding: 0;
+    padding-bottom: 25px;
+    overflow: visible;
+    .container-form {
+        padding: 30px;
+        background: #C0E2DF;
+
+        .title {
+            @include f-b;
+            font-size: 28px;
+            color: #1A98AF;
+            text-align: center;
+            line-height: 1;
+        }
+    }
+}
+/* --------------------- /Section form ---------------------- */
+
+.wpcf7 {
+	margin: auto;
+    margin-top: 25px;
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+	input[type="url"], input[type="email"], input[type="tel"] {
+		direction: rtl;
+	}
+	input, select {
+		@include f-r;
+		font-size: 18px;
+		border: none;
+		color: #000;
+		@include placeholder-color(#000);
+		background: #fff;
+
+		
+
+		outline: none;
+		padding: 15px;
+		width: 100%;
+		height: 100%;
+		
+		direction: rtl;
+
+		&:focus {
+			@include placeholder-color(#000);
+			color: #000;
+		}
+	}
+	.wpcf7-form-control-wrap {
+		display: block;
+		position: relative;
+        margin: 0 3px;
+	}
+
+    .newsletter {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        left: 0;
+        input {
+            height: auto;
+            width: auto;
+        }
+    }
+	input[type="submit"] {
+		@include f-b;
+		font-size: 20px;
+		color: #fff;
+		background: #FF6D70;
+		padding: 12px 25px;
+        height: 53px;
+        width: 105px;
+        flex-shrink: 0;
+		text-align: center;
+		transition: 0.5s;
+		display: inline-block;
+		cursor: pointer;
+        margin: 0 3px;
+		&:hover {
+			background: #0E87A1;
+		}
+	}
+
+	.wpcf7-not-valid-tip {
+		@include f-r;
+		font-size: 14px;
+		color: #dc3232;
+		position: absolute;
+        bottom: 0;
+        left: 10px;
+	}
+	.wpcf7-response-output {
+		@include f-r;
+		font-size: 16px;
+		color: #dc3232;
+		position: absolute;
+		bottom: -70px;
+		border: none !important;
+		padding: 0;
+		margin: 0;
+
+        @media only screen and (max-width : $mw) {
+            bottom: -35px;
+        }
+	}
+	.ajax-loader {
+		position: absolute !important;
+	}
+
+	@media only screen and (max-width : $mw) {
+        form {
+            flex-wrap: wrap;
+        }
+        .wpcf7-form-control-wrap {
+            width: 100%;
+            margin: 0;
+            margin-top: 10px;
+        }
+		input[type="submit"] {
+			width: 100%;
+            margin: 0;
+			margin-top: 15px;
+		}
+	}
+}
+
+
+/* ---------------------- Section platforma ---------------------- */
+section.platforma {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0;
+        margin: -22px;
+        margin-top: 30px;
+        .box {
+            width: 25%;
+            margin: 0;
+            padding: 22px;
+            display: block;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            .inner {
+                position: relative;
+                background: #f4f4f4;
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.19);
+                padding: 40px;
+                height: 100%;
+            }
+
+            .text {
+                @include f-r;
+                font-size: 28px;
+                color: #000;
+                line-height: 1.2;  
+                height: 65px;
+            }
+
+            .image {
+                margin-top: 20px;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #F4F4F4;
+                padding: 40px;
+                transition: 0.5s;
+                opacity: 0;
+        
+                .text {
+                    @include f-xb;
+                    color: #FF6D70;
+                }
+
+                .description {
+                    @include f-r;
+                    font-size: 18px;
+                    color: #000;
+                    margin-top: 15px;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -3px;
+                    right: -3px;
+                    bottom: 25px;
+                    left: 25px;
+                    border-top: 3px solid #FF8584;
+                    border-right: 3px solid #FF8584;
+                    z-index: -1;
+                }
+            }
+
+            &:hover {
+            //&:first-child {
+                .hover {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+    @media only screen and (max-width : $tw) {
+        .boxes {
+            .box {
+                .inner {
+                    padding: 20px;
+                    .text {
+                        font-size: 22px;
+                        height: 52px;
+                    }
+                    .hover {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .boxes {
+            margin: -10px;
+            margin-top: 20px;
+            .box {
+                width: 50%;
+                padding: 10px;
+                .inner {
+                    padding: 10px;
+                    .text {
+                        font-size: 20px;
+                        height: 48px;
+                    }
+                    .description {
+                        font-size: 16px;
+                        margin-top: 10px;
+                    }
+                    .hover {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* --------------------- /Section platforma ---------------------- */
+
+/* ---------------------- Section advantages ---------------------- */
+section.advantages {
+    .tabs-menu {
+        margin-top: 45px;
+		.title-mobile {
+			@include f-b;
+			font-size: 18px;
+			color: #000;
+			padding: 10px;
+            padding-left: 30px;
+            border: 2px solid #ff6d70;
+			&.has-arrow {
+				background: url("../images/icons/d.png") no-repeat left 10px center;
+				
+			}
+			cursor: pointer;
+			display: none;
+			text-align: center;
+		}
+
+		.items {
+			display: flex;
+			justify-content: space-between;
+            margin: 0 -4px;
+			.item {
+				text-align: center;
+				display: block;
+				@include f-r;
+				font-size: 18px;
+				color: #000;
+                background: #F4F4F4;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.5s;
+				position: relative;
+                flex-grow: 1;
+                padding: 13px;
+                margin: 0 4px;
+
+				span {
+					display: inline-block;
+					position: relative;
+				}
+				&.active {
+                    background: #FF6D70;
+					
+				}
+
+				&:hover {
+					background: #FF6D70;
+				}
+
+			}
+		}
+	}
+
+    .tab {
+        margin-top: 70px;
+        .parts {
+            align-items: stretch;
+        }
+        .image {
+            text-align: left;
+        }
+        .content {
+            border-bottom: 2px solid #FF8584;
+            padding-bottom: 30px;  
+            height: 100%;
+        }
+            
+    }
+
+    @media only screen and (max-width : $lw) {
+        .tabs-menu {
+            margin-top: 35px;
+            .items {
+                .item {
+                    font-size: 18px;
+       
+                }
+            }
+        }
+    }
+	@media only screen and (max-width : $mw) {
+        .tabs-menu {
+            margin-top: 35px;
+            .title-mobile {
+                display: block;
+            }
+            .items {
+                display: none;
+                border: none;
+                background: #fff;
+                .item {
+                    font-size: 16px;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .tab {
+            margin-top: 25px;
+        }
+
+	}
+}
+/* --------------------- /Section advantages ---------------------- */
+
+/* ---------------------- Section users ---------------------- */
+section.users {
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        background: #F4F4F4;
+        margin-top: 45px;
+
+        .logo {
+            margin: 0 1%;
+            img {
+                max-width: 100%;
+                
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .logos {
+            flex-wrap: wrap;
+            .logo {
+                margin: 1% 1%;
+                max-width: 30%;
+            }
+        }
+    }
+}
+/* --------------------- /Section users ---------------------- */
+
+/* ---------------------- Section about-bottom ---------------------- */
+section.about-bottom {
+    background: url("../images/q.png") no-repeat center center;
+    .section-title {
+        color: #1B98B0;
+        border-color: #1B98B0;
+    }
+
+    .swiper-container {
+        .swiper-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 45px;
+            left: 0;
+            right: 0;
+            
+            .swiper-button-prev, .swiper-button-next {
+                width: 10px;
+                height: 20px;
+                position: static;
+                margin: 0 10px;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .swiper-wrapper {
+            display: flex;
+            align-items: stretch;
+            position: relative;
+            .swiper-slide {
+                padding: 30px;
+                
+                height: auto;
+                .inner {
+                    background: #f4f4f4;
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.19);
+                    padding: 25px;
+                    padding-bottom: 60px;
+                    height: 100%;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -3px;
+                        right: -3px;
+                        bottom: 35px;
+                        left: 35px;
+                        border-top: 3px solid #1B98B0;
+                        border-right: 3px solid #1B98B0;
+                        z-index: -1;
+                    }
+                    .name {
+                        @include f-b;
+                        font-size: 21px;
+                        color: #1B98B0;
+                        text-align: center;
+                    }
+                    .role {
+                        @include f-r;
+                        font-size: 19px;
+                        color: #1B98B0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .swiper-container {
+            .swiper-navigation {
+                bottom: 35px;
+            }
+            .swiper-wrapper {
+                .swiper-slide {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}
+/* --------------------- /Section about-bottom ---------------------- */
+
+
+/* ---------------------- footer ---------------------- */
+footer {
+    .part-top {
+        padding-top: 75px;
+        padding-bottom: 130px;
+        background: #c0e2df url("../images/bg-footer.png") no-repeat center;
+
+        .wrapper-form {
+            background: #fff;
+            padding: 50px;
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            .title {
+                @include f-b;
+                font-size: 28px;
+                color: #000;
+                text-align: center;
+                strong {
+                    color: #1A98AF;
+                    text-align: center;
+                }
+            }
+
+            .wpcf7 {
+                form {
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .wpcf7-form-control-wrap {
+                    width: 30%;
+                }
+                input, select {
+                    border-bottom: 1px solid #000;
+                    padding: 5px 0;
+                    
+                }
+                input[type="submit"] {
+                    border: none;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+    .part-bottom {
+        background: #F7F7F7;
+        border-top: 1px solid #787878;
+		padding: 15px 50px;
+		color: #000000;
+		@include f-r;
+		font-size: 18px;
+        text-align: center;
+        strong {
+            @include f-b;
+        }
+		.section-inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 100%;
+		}
+	}
+
+    @media only screen and (max-width : $mw) {
+        .part-top {
+            padding-top: 25px;
+            padding-bottom: 45px;
+            .wrapper-form {
+                padding: 25px;
+                .wpcf7 {
+                    margin-top: 10px;
+                    form {
+                        flex-wrap: wrap;
+                    }
+                    .wpcf7-form-control-wrap {
+                        width: 100%;
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+
+        .part-bottom {
+            .section-inner {
+                flex-direction: column;
+                align-items: center;
+                p,a {
+                    display: block;
+                    margin: 3px 0;
+                }
+            }
+        }
+    }
+}
+/* --------------------- /footer ---------------------- */
