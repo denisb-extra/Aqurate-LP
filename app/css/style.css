@@ -202,22 +202,29 @@ section {
 /* ---------------------- Section top-index ---------------------- */
 section.top-index {
   background: #C0E2DF url("../images/slider-top/bg.png") no-repeat center;
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 50px;
-  height: 650px; }
-  section.top-index .header .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  section.top-index .header .tel {
-    font-family: 'Assistant-Bold';
-    font-size: 42px;
-    line-height: 1;
-    padding-left: 5px;
-    color: #FF6D70;
-    border: 2px solid #ff6d70;
-    border-right: none;
-    border-top: none; }
+  height: 750px; }
+  section.top-index .header {
+    position: relative;
+    z-index: 5;
+    background: #fff;
+    padding: 10px; }
+    section.top-index .header .header-inner {
+      max-width: 1350px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    section.top-index .header .tel {
+      font-family: 'Assistant-Bold';
+      font-size: 42px;
+      line-height: 1;
+      padding-left: 5px;
+      color: #FF6D70;
+      border: 2px solid #ff6d70;
+      border-right: none;
+      border-top: none; }
   section.top-index video {
     width: 100%;
     height: 100%;
@@ -253,11 +260,13 @@ section.top-index {
     z-index: 3; }
   section.top-index .cont-brand {
     text-align: center;
+    width: 100%;
     z-index: 3;
     position: absolute;
     bottom: 80px;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    padding: 20px; }
     section.top-index .cont-brand .text {
       font-family: 'Assistant-Bold';
       font-size: 35px;
@@ -266,6 +275,10 @@ section.top-index {
       position: relative;
       bottom: 0;
       margin-top: 25px; }
+    section.top-index .cont-brand .logo-brand {
+      width: 100%; }
+      section.top-index .cont-brand .logo-brand img {
+        max-width: 100%; }
     section.top-index .cont-brand .wrapper-button {
       position: relative;
       bottom: 0; }
@@ -283,16 +296,15 @@ section.top-index {
         background: #0E87A1; }
   @media only screen and (max-width: 1370px) {
     section.top-index {
-      padding-top: 15px;
       padding-bottom: 25px;
-      height: 500px; }
+      height: 650px; }
       section.top-index .header .logo img {
         height: 65px; }
       section.top-index .header .tel {
         font-size: 35px; } }
   @media only screen and (max-width: 950px) {
     section.top-index {
-      height: 400px; }
+      height: 600px; }
       section.top-index .cont-brand {
         bottom: 45px; }
         section.top-index .cont-brand .text {

@@ -1,12 +1,18 @@
 /* ---------------------- Section top-index ---------------------- */
 section.top-index {
     background: #C0E2DF url("../images/slider-top/bg.png") no-repeat center;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 50px;
-    height: 650px;
+    height: 750px;
     
     .header {
+        position: relative;
+        z-index: 5;
+        background:  #fff;
+        padding: 10px;
         .header-inner {
+            max-width: 1350px;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -69,11 +75,13 @@ section.top-index {
     }
     .cont-brand {
         text-align: center;
+        width: 100%;
         z-index: 3;
         position: absolute;
         bottom: 80px;
         left: 50%;
         transform: translateX(-50%);
+        padding: 20px;
         .text {
             @include f-b;
             font-size: 35px;
@@ -82,6 +90,12 @@ section.top-index {
             position: relative;
             bottom: 0;
             margin-top: 25px;
+        }
+        .logo-brand {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
         }
         .wrapper-button {
             position: relative;
@@ -104,9 +118,8 @@ section.top-index {
     }
 
     @media only screen and (max-width : $lw) {
-        padding-top: 15px;
         padding-bottom: 25px;
-        height: 500px;
+        height: 650px;
         .header {
             .logo {
                 img {
@@ -120,7 +133,7 @@ section.top-index {
     }
 
     @media only screen and (max-width : $mw) {
-        height: 400px;
+        height: 600px;
         .cont-brand {
             bottom: 45px;
             .text {
